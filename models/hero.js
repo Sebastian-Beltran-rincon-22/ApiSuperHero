@@ -17,6 +17,11 @@ const heroShema = new Schema({
     type: String,
     required : false
   },
+  done: {
+    type: Boolean,
+    required: true,
+    default:false
+  }
 })
 
 const Hero = mongoose.model('Hero',heroShema)
