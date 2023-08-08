@@ -1,10 +1,12 @@
 const Hero = require ('../models/hero')
 
+
 const heroControllers ={
+// Create hero
 create: async (req,res) => {
   try {
-    const {namehero,imgHero, done} = req.body //(variables modelos que manejen mismo req.(algo), se pueden aregregar dentro {})
-    const lastHero = await Hero.findOne().sort({heroId: -1})
+    const {namehero,imgHero, done} = req.body //"desestructuracion de datos"
+    const lastHero = await Hero.findOne().sort({heroId: -1})// "manejo de ID de manera ascente por ID unico"
     const newHeroId = lastHero ? lastHero.heroId +1 : 1
 
     const newHero = new Hero ({
@@ -20,6 +22,7 @@ create: async (req,res) => {
     return res.status(409).json ({msg:error.message})
   }
   },
+// Get
 get: async (req,res) => {
   try {
       const heros = await Hero.find({})
@@ -29,7 +32,7 @@ get: async (req,res) => {
       return res.status(204).json({msg:error.message})
     }
   },
-
+// Get for ID
 getById: async (req,res) => {
     try {
         const hero = await Hero.findOne({heroId: req.params.heroId})
@@ -40,7 +43,7 @@ getById: async (req,res) => {
       return res.status(204).json({msg:error.message})
     }
   },
-
+// update hero
 update: async (req,res) =>{
   try{
     const {namehero, imgHero,done} = req.body
@@ -57,7 +60,7 @@ update: async (req,res) =>{
     return res.status(304).json({msg:error.message})
   }
 },
-
+// Delete Hero
 delete: async (req,res)=>{
   try {
     const {heroId} = req.params
