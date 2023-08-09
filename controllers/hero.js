@@ -49,12 +49,12 @@ update: async (req,res) =>{
     const {namehero, imgHero,done} = req.body
     const heroId = req.params
 
-    await Hero.findOneAndUpdate(heroId,{
+    const updateHero = await Hero.findOneAndUpdate(heroId,{
       namehero: namehero,
       imgHero : imgHero,
       done:done
     })
-    res.json({msg:'updated'})
+    res.status(201).json(updateHero)
   }catch(error){
     console.error(error)
     return res.status(304).json({msg:error.message})
