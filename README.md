@@ -1,13 +1,14 @@
 # CRUD Hero-Api - Express
 
-![Logo](https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png)
-![Logo](https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg)
-![Logo](https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg)
+![Logo](https://miro.medium.com/v2/resize:fit:1400/1*scZ5_B1mKwZxqP0KuCkf_w.png)
 
 
 ## Descripción
 
 Este proyecto es un ejemplo de una API RESTful desarrollada con Express-Js que permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) en un modelo de Asistencias de una biblioteca con SuperHeroes
+
+## Version Oficial V1.0
+![image](https://github.com/Sebastian-Beltran-rincon-22/AsistHero/assets/132385582/7b5ff2b6-f0e1-4a00-b386-99eecf66e287)
 
 ## Funcionalidades
 
